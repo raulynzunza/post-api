@@ -5,7 +5,7 @@ import './models/Posts.js';
 import { PORT } from './config.js'
 async function main() {
     try {
-        await sequelize.sync()
+        await sequelize.sync({ force: true })
         app.listen(PORT);
         console.log('App listening at 4000');
     } catch (error) {
