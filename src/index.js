@@ -6,8 +6,8 @@ import './models/Posts.js';
 async function main() {
     try {
         await sequelize.sync({ force: false })
-        app.listen(4000);
-        console.log('App listening at 4000');
+        app.listen(process.env.PORT || 80);
+        console.log('App listening at 80');
     } catch (error) {
         console.log('Error de conexion')
     }
